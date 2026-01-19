@@ -1,172 +1,30 @@
-:root {
-    --neon-blue: #00f3ff;
-    --neon-red: #ff0055;
-    --neon-green: #00ff9d;
-    --dark-bg: #0a0a12;
-    --panel-bg: #11111a;
-    --text-color: #e0e0e0;
+.container {
+  background-color: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #302b63, #24243e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #302b63, #24243e);  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+ */
+  color: #e8e8e8;
 }
 
-body {
-    width: 350px;
-    height: 500px;
-    margin: 0;
-    background-color: var(--dark-bg);
-    color: var(--text-color);
-    font-family: 'Share Tech Mono', monospace;
-    overflow: hidden;
-    border: 1px solid var(--neon-blue);
+.button {
+  background-color: #08aeea;
+  background-image: linear-gradient(315deg, #08aeea 0%, #2a2a72 74%);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.hud-container {
-    padding: 20px;
-    height: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+.button:hover {
+  background-color: #2a2a72;
 }
 
-header {
-    text-align: center;
-    border-bottom: 2px solid var(--neon-blue);
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    position: relative;
+h1, h2, h3 {
+  text-shadow: 0px 0px 10px rgba(0, 255, 216, 0.8);
 }
 
-h1 {
-    font-size: 1.2rem;
-    margin: 0;
-    letter-spacing: 2px;
-    color: var(--neon-blue);
-    text-shadow: 0 0 5px var(--neon-blue);
-}
-
-.status-blink {
-    animation: blink 2s infinite;
-    color: var(--neon-green);
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-}
-
-.score-circle-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.score-circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 4px solid var(--panel-bg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: bold;
-    box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
-    transition: all 0.5s ease;
-}
-
-.score-label {
-    font-size: 0.8rem;
-    color: #888;
-}
-
-.lenses-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.lens-card {
-    background: var(--panel-bg);
-    padding: 10px;
-    border: 1px solid #333;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.lens-header {
-    font-size: 0.7rem;
-    color: #aaa;
-    margin-bottom: 5px;
-}
-
-.lens-val {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.lens-bar {
-    height: 4px;
-    background: #333;
-    margin-top: 5px;
-    width: 100%;
-}
-
-.lens-bar .fill {
-    height: 100%;
-    background: var(--neon-blue);
-    width: 0%;
-    transition: width 0.5s;
-}
-
-.log-terminal {
-    background: #000;
-    border: 1px solid #333;
-    padding: 10px;
-    height: 120px;
-    overflow-y: auto;
-    font-size: 0.75rem;
-    font-family: monospace;
-    color: var(--neon-green);
-    margin-bottom: 15px;
-}
-
-.cyber-btn {
-    background: transparent;
-    border: 1px solid var(--neon-blue);
-    color: var(--neon-blue);
-    padding: 10px;
-    width: 100%;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.cyber-btn:hover {
-    background: var(--neon-blue);
-    color: #000;
-    box-shadow: 0 0 10px var(--neon-blue);
-}
-
-.risk-high { color: var(--neon-red); border-color: var(--neon-red); }
-.risk-med { color: orange; border-color: orange; }
-.risk-low { color: var(--neon-green); border-color: var(--neon-green); }
-
-#trinetra-shield-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    z-index: 9999;
-    cursor: pointer;
-    background: rgba(0,0,0,0.7);
-    border-radius: 50%;
-    border: 2px solid #00f3ff;
-    box-shadow: 0 0 10px #00f3ff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    color: #00f3ff;
+p {
+  font-size: 18px;
+  line-height: 1.6;
 }
