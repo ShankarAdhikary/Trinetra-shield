@@ -1,61 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trinetra Shield</title>
+    <title>Cyberpunk UI Interface</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #00ffcc;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+        h1 {
+            text-shadow: 0 0 5px #00ffcc;
+        }
+        .cyberpunk-card {
+            background-color: #202020;
+            border: 2px solid #00ffcc;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+        }
+        .button {
+            background-color: #00ffcc;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #00cc99;
+        }
+    </style>
 </head>
-
 <body>
-    <div class="hud-container">
-        <header>
-            <h1>TRINETRA // <span class="status-blink">ACTIVE</span></h1>
-            <div class="scan-line"></div>
-        </header>
-
-        <main id="analysis-view">
-            <div class="score-circle-container">
-                <div class="score-circle user-score" id="global-score">
-                    <span class="score-val">--</span>
-                    <span class="score-label">TRUST</span>
-                </div>
-            </div>
-
-            <div class="lenses-grid">
-                <div class="lens-card" id="lens-signal">
-                    <div class="lens-header">SIGNAL</div>
-                    <div class="lens-val">--</div>
-                    <div class="lens-bar">
-                        <div class="fill" style="width: 0%"></div>
-                    </div>
-                </div>
-                <div class="lens-card" id="lens-lineage">
-                    <div class="lens-header">LINEAGE</div>
-                    <div class="lens-val">--</div>
-                    <div class="lens-bar">
-                        <div class="fill" style="width: 0%"></div>
-                    </div>
-                </div>
-                <div class="lens-card" id="lens-intent">
-                    <div class="lens-header">INTENT</div>
-                    <div class="lens-val">--</div>
-                    <div class="lens-bar">
-                        <div class="fill" style="width: 0%"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="log-terminal" id="risk-log">
-                <p>> Waiting for asset...</p>
-            </div>
-
-            <button id="analyze-btn" class="cyber-btn">INITIATE SCAN</button>
-        </main>
+    <h1>Welcome to the Cyberpunk UI</h1>
+    <div class="cyberpunk-card">
+        <h2>Interactive Features</h2>
+        <button class="button">Get Started</button>
     </div>
-    <script src="popup.js"></script>
 </body>
-
 </html>
