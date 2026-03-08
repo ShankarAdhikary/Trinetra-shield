@@ -1,0 +1,76 @@
+{
+  "name": "trinetra",
+  "version": "1.0.0",
+  "description": "TRINETRA - Your Third Eye for Safe and Productive Browsing",
+  "main": "src/background/background.js",
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "build:simple": "node build.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/ --ext .js",
+    "lint:fix": "eslint src/ --ext .js --fix",
+    "format": "prettier --write \"src/**/*.{js,css,html}\"",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShankarAdhikary/Trinetra-shield.git"
+  },
+  "keywords": [
+    "chrome-extension",
+    "security",
+    "phishing-protection",
+    "productivity",
+    "task-management",
+    "time-tracking",
+    "browser-extension"
+  ],
+  "author": "TRINETRA Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShankarAdhikary/Trinetra-shield/issues"
+  },
+  "homepage": "https://github.com/ShankarAdhikary/Trinetra-shield#readme",
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "babel-loader": "^9.1.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.0",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.0",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "lint-staged": "^14.0.0",
+    "mini-css-extract-plugin": "^2.7.0",
+    "prettier": "^3.0.0",
+    "rimraf": "^5.0.0",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.0"
+  },
+  "dependencies": {
+    "moment": "^2.29.4"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,html,json,md}": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}

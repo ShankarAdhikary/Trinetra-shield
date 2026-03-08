@@ -1,0 +1,55 @@
+name: Release Extension
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-upload:
+    name: Build and Upload Extension
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update version in manifest
+        run: |
+          VERSION="${{ github.event.release.tag_name }}"
+          VERSION="${VERSION#v}"
+          jq --arg v "$VERSION" '.version = $v' src/manifest.json > tmp.json
+          mv tmp.json src/manifest.json
+
+      - name: Build extension
+        run: npm run build:simple
+
+      - name: Create extension package
+        run: |
+          cd dist
+          zip -r ../trinetra-${{ github.event.release.tag_name }}.zip .
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: trinetra-${{ github.event.release.tag_name }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Uncomment to auto-publish to Chrome Web Store
+      # - name: Publish to Chrome Web Store
+      #   uses: trmcnvn/chrome-addon@v2
+      #   with:
+      #     extension: ${{ secrets.CHROME_EXTENSION_ID }}
+      #     zip: trinetra-${{ github.event.release.tag_name }}.zip
+      #     client-id: ${{ secrets.CHROME_CLIENT_ID }}
+      #     client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
+      #     refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRINETRA Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+    <div class="options-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/icons/icon48.png" alt="TRINETRA" class="logo">
+                <h1>TRINETRA</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#general" class="nav-item active" data-section="general">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                        </path>
+                    </svg>
+                    General
+                </a>
+                <a href="#security" class="nav-item" data-section="security">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    Security
+                </a>
+                <a href="#productivity" class="nav-item" data-section="productivity">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Productivity
+                </a>
+                <a href="#notifications" class="nav-item" data-section="notifications">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                    Notifications
+                </a>
+                <a href="#account" class="nav-item" data-section="account">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Account
+                </a>
+                <a href="#about" class="nav-item" data-section="about">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    About
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- General Settings -->
+            <section id="general" class="settings-section active">
+                <h2>General Settings</h2>
+
+                <div class="setting-group">
+                    <h3>Appearance</h3>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label for="theme-select">Theme</label>
+                            <p class="setting-description">Choose your preferred color scheme</p>
+                        </div>
+                        <select id="theme-select" class="select-input">
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                            <option value="system">System Default</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Startup</h3>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label>Show popup on startup</label>
+                            <p class="setting-description">Display TRINETRA popup when Chrome starts</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="startup-popup">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Data</h3>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label>Sync data across devices</label>
+                            <p class="setting-description">Keep your settings and tasks in sync</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="sync-enabled" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label>Export data</label>
+                            <p class="setting-description">Download a copy of your data</p>
+                        </div>
+                        <button class="btn btn-secondary" id="export-data-btn">Export</button>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label>Clear all data</label>
+                            <p class="setting-description">Delete all local data and reset settings</p>
+                        </div>
+                        <button class="btn btn-danger" id="clear-data-btn">Clear Data</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Security Settings -->
+            <section id="security" class="settings-section">
+                <h2>Security Settings</h2>
+
+                <div class="setting-group">
+                    <h3>Phishing Protection</h3>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label>Enable phishing detection</label>
+                            <p class="setting-description">Scan URLs for known phishing threats</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="phishing-enabled" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label for="security-level">Protection level</label>
+                            <p class="setting-description">Higher levels may have more false positives</p>
+                        </div>
+                        <select id="security-level" class="select-input">
+                            <option value="low">Low - Known threats only</option>
+                            <option value="medium" selected>Medium - Balanced protection</option>
+                            <option value="high">High - Maximum protection</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Site Blocking</h3>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label>Block malicious sites</label>
+                            <p class="setting-description">Prevent access to dangerous websites</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="block-malicious" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label>Show warning before blocking</label>
+                            <p class="setting-description">Display a warning page instead of blocking immediately</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="show-warning" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Whitelist</h3>
+                    <p class="setting-description">Sites that will never be blocked</p>
+                    <div class="list-container">
+                        <ul id="whitelist" class="editable-list">
+                            <!-- Whitelist items will be rendered here -->
+                        </ul>
+                        <div class="add-item-container">
+                            <input type="text" id="whitelist-input" placeholder="Enter domain (e.g., example.com)"
+                                class="text-input">
+                            <button class="btn btn-primary" id="add-whitelist-btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Productivity Settings -->
+            <section id="productivity" class="settings-section">
+                <h2>Productivity Settings</h2>
+
+                <div class="setting-group">
+                    <h3>Time Tracking</h3>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label>Enable time tracking</label>
+                            <p class="setting-description">Track time spent on websites</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="time-tracking-enabled" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label>Track in private mode</label>
+                            <p class="setting-description">Include incognito browsing in time tracking</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="track-private">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Focus Mode</h3>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label for="focus-duration">Default focus duration</label>
+                            <p class="setting-description">Timer duration for focus sessions</p>
+                        </div>
+                        <select id="focus-duration" class="select-input">
+                            <option value="15">15 minutes</option>
+                            <option value="25" selected>25 minutes</option>
+                            <option value="45">45 minutes</option>
+                            <option value="60">1 hour</option>
+                        </select>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label>Play sound when focus ends</label>
+                            <p class="setting-description">Audio notification when timer completes</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="focus-sound" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Blocked Sites (Focus Mode)</h3>
+                    <p class="setting-description">Sites blocked during focus sessions</p>
+                    <div class="list-container">
+                        <ul id="blocked-sites-list" class="editable-list">
+                            <!-- Blocked sites will be rendered here -->
+                        </ul>
+                        <div class="add-item-container">
+                            <input type="text" id="blocked-site-input" placeholder="Enter domain (e.g., facebook.com)"
+                                class="text-input">
+                            <button class="btn btn-primary" id="add-blocked-btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notification Settings -->
+            <section id="notifications" class="settings-section">
+                <h2>Notification Settings</h2>
+
+                <div class="setting-group">
+                    <h3>General</h3>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label>Enable notifications</label>
+                            <p class="setting-description">Show desktop notifications</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="notifications-enabled" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label>Notification sound</label>
+                            <p class="setting-description">Play a sound with notifications</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="notification-sound" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Security Notifications</h3>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label>Threat alerts</label>
+                            <p class="setting-description">Notify when a threat is detected</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="threat-notifications" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Productivity Notifications</h3>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label>Break reminders</label>
+                            <p class="setting-description">Get reminded to take breaks</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="break-reminders" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label for="break-interval">Break reminder interval</label>
+                            <p class="setting-description">How often to remind you to take a break</p>
+                        </div>
+                        <select id="break-interval" class="select-input">
+                            <option value="30">Every 30 minutes</option>
+                            <option value="45">Every 45 minutes</option>
+                            <option value="60" selected>Every 1 hour</option>
+                            <option value="90">Every 1.5 hours</option>
+                            <option value="120">Every 2 hours</option>
+                        </select>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label>Daily summary</label>
+                            <p class="setting-description">Receive a daily browsing summary</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="daily-summary" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Account Settings -->
+            <section id="account" class="settings-section">
+                <h2>Account Settings</h2>
+
+                <div id="logged-in-section" class="setting-group hidden">
+                    <div class="account-info">
+                        <div class="avatar" id="user-avatar">U</div>
+                        <div class="user-details">
+                            <p class="user-name" id="user-name">User Name</p>
+                            <p class="user-email" id="user-email">user@example.com</p>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label>Sign out</label>
+                            <p class="setting-description">Sign out of your TRINETRA account</p>
+                        </div>
+                        <button class="btn btn-secondary" id="logout-btn">Sign Out</button>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label>Delete account</label>
+                            <p class="setting-description">Permanently delete your account and all data</p>
+                        </div>
+                        <button class="btn btn-danger" id="delete-account-btn">Delete Account</button>
+                    </div>
+                </div>
+
+                <div id="logged-out-section" class="setting-group">
+                    <div class="auth-prompt">
+                        <h3>Sign in to unlock more features</h3>
+                        <ul class="feature-list">
+                            <li>Sync settings across devices</li>
+                            <li>Cloud backup for tasks</li>
+                            <li>Advanced analytics</li>
+                        </ul>
+                        <div class="auth-buttons">
+                            <button class="btn btn-primary" id="login-btn">Sign In</button>
+                            <button class="btn btn-secondary" id="signup-btn">Create Account</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="settings-section">
+                <h2>About TRINETRA</h2>
+
+                <div class="setting-group">
+                    <div class="about-info">
+                        <img src="../assets/icons/icon128.png" alt="TRINETRA" class="about-logo">
+                        <h3>TRINETRA</h3>
+                        <p class="version">Version 1.0.0</p>
+                        <p class="tagline">Your Third Eye for Safe and Productive Browsing</p>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Links</h3>
+                    <div class="link-list">
+                        <a href="https://github.com/your-username/trinetra" target="_blank" class="link-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            GitHub Repository
+                        </a>
+                        <a href="https://github.com/your-username/trinetra/issues" target="_blank" class="link-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            Report an Issue
+                        </a>
+                        <a href="https://github.com/your-username/trinetra#readme" target="_blank" class="link-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            Documentation
+                        </a>
+                        <a href="https://github.com/your-username/trinetra/blob/main/LICENSE" target="_blank"
+                            class="link-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                            License (MIT)
+                        </a>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Credits</h3>
+                    <p class="credits-text">
+                        Built with love by the TRINETRA team. Special thanks to all our contributors and the open-source
+                        community.
+                    </p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="options.js" type="module"></script>
+</body>
+
+</html>

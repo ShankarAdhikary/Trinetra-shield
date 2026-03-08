@@ -1,0 +1,44 @@
+{
+  "env": {
+    "browser": true,
+    "es2022": true,
+    "webextensions": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["import"],
+  "rules": {
+    "no-console": "off",
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "import/order": ["error", {
+      "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+      "newlines-between": "always"
+    }],
+    "import/no-unresolved": "off",
+    "prefer-const": "error",
+    "no-var": "error",
+    "eqeqeq": ["error", "always"],
+    "curly": ["error", "multi-line"]
+  },
+  "ignorePatterns": ["dist/", "node_modules/", "coverage/"],
+  "overrides": [
+    {
+      "files": ["tests/**/*.js", "**/*.test.js", "**/*.spec.js"],
+      "env": {
+        "node": true,
+        "jest": true
+      },
+      "globals": {
+        "global": "readonly"
+      }
+    }
+  ]
+}

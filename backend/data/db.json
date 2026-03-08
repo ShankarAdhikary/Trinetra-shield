@@ -1,0 +1,59 @@
+{
+  "users": {
+    "a904fcae-be64-43dd-81d3-30c6feb9d455": {
+      "id": "a904fcae-be64-43dd-81d3-30c6feb9d455",
+      "email": "adhikaryshankar04@gmail.com",
+      "name": "Shankar",
+      "provider": "email",
+      "createdAt": "2026-03-08T20:33:17.172Z",
+      "settings": {
+        "securityLevel": "high",
+        "notificationsEnabled": true,
+        "syncEnabled": true,
+        "focusModeDefaults": {
+          "breakDuration": 5,
+          "duration": 25
+        },
+        "blockMalicious": true,
+        "blockedSites": [],
+        "breakInterval": 60,
+        "breakReminders": true,
+        "dailySummary": true,
+        "focusDuration": 25,
+        "focusSound": true,
+        "notificationSound": true,
+        "phishingEnabled": true,
+        "showWarning": true,
+        "startupPopup": true,
+        "theme": "dark",
+        "threatNotifications": true,
+        "timeTrackingEnabled": true,
+        "trackPrivate": true,
+        "whitelist": []
+      },
+      "passwordHash": "$2a$12$W13bCvVgN1BEGiJLGyy//OG.AY9eMiV8cjBKeewg8YCnuL3H0mkmS",
+      "updatedAt": "2026-03-08T20:47:29.084Z"
+    },
+    "0e50a0d9-880b-4079-bcb3-37fa7caa9417": {
+      "id": "0e50a0d9-880b-4079-bcb3-37fa7caa9417",
+      "email": "test@test.com",
+      "name": "Test",
+      "provider": "email",
+      "createdAt": "2026-03-08T20:37:03.769Z",
+      "settings": {
+        "securityLevel": "medium",
+        "notificationsEnabled": true,
+        "syncEnabled": true,
+        "focusModeDefaults": {
+          "duration": 25,
+          "breakDuration": 5
+        }
+      },
+      "passwordHash": "$2a$12$JsGux9niUYM5IeDoDgsRwuJ2Qi21w3alpu2uUmvw.rg4I8Agid7KG"
+    }
+  },
+  "tasks": {},
+  "timeData": {},
+  "settings": {},
+  "securityLogs": []
+}
